@@ -1,0 +1,4 @@
+external_id,urn,content_file_name,week_id,preferred_language,state_code,message_status_timestamp,message_status
+20240316070000:884db9ba-7993-434e-a426-c3b2d3e91214,919819013542,w1_1.wav,w1_1,hin,7,1710563806,READ
+20240316070000:5ef13751-7842-4c8a-a925-446b314cd48b,919599037112,w1_1.wav,w1_1,hin,7,1710568143,READ
+20240316070000:847a8240-9675-4f87-baf8-876c68d50fc5,918307041754,w1_1.wav,w1_1,hin,7,1710552867,SENT
