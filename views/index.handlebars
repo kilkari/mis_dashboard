@@ -469,22 +469,22 @@
 
                         <div class="row row-deck row-cards">
                             <div class="col-lg-7">
-                                 <div class="row">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title">Core messages</h3>
-                                        <div id="core-messages-k-whatsapp"></div>
+                                <div class="row">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Core messages</h3>
+                                            <div id="core-messages-k-whatsapp"></div>
 
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title">Interactive messages</h3>
-                                        <div id="interactivemessages-k-whatsapp"></div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Interactive messages</h3>
+                                            <div id="interactivemessages-k-whatsapp"></div>
 
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                             <div class="col-lg-5">
@@ -504,478 +504,488 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Messages sent by stage</h3>
+                                    <div id="messages-sent-by-stage-k-whatsapp"></div>
+                                </div>
+                            </div 
+                        
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <script>
-        // @formatter:off
+        <script>
+            // @formatter:off
 
-        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
 
-            window.ApexCharts && (new ApexCharts(document.getElementById('chart-combination'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-combination'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '30%',
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "A",
+                        data: [1027218, 103690, 2697678, 510321]
+                    }],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Added', 'Completed', 'Active Subscription', 'Deactivated'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ["#D8ECFF"],
+                    legend: {
                         show: false,
                     },
-                    animations: {
-                        enabled: false
+                })).render();
+
+            });
+
+
+
+            // @formatter:on
+        </script>
+        <script>
+            // @formatter:off
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-incomingrch'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
                     },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '30%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [1027218, 103690, 2697678, 510321]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '20%',
+                        }
                     },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "A",
+                        data: [3840913, 1057914, 2782999]
+                    }],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Receive', 'Accepted', 'Rejected'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ["#FFDAC1"],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+
+            });
+
+
+
+            // @formatter:on
+        </script>
+        <script>
+            // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-completion-tasks-6'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 400,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            barHeight: '50%',
+                            horizontal: true,
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "Tasks completion",
+                        data: [4724, 592, 544019, 797, 571850, 777521, 49665, 26122, 0, 66, 128945, 305582]
+                    }],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Not Valid', 'Invalid Child DOB', 'Invalid LMP', 'Invalid Child Death', 'Abort', 'Duplicate Record', 'Already Subscribed', 'Missmatch Child & Mother', 'Recorded with Active Child', 'Invalid Case', 'Format Issue', ' Invalid Number'],
+
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+
+                    colors: ["#FFDAC1"],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+            });
+            // @formatter:on
+        </script>
+        <script>
+            // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-subscribers-added'), {
+                    chart: {
+                        type: "donut",
+                        fontFamily: 'inherit',
+                        height: 240,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [10000, 20000, 15000, 14000, 5000, 36000],
+                    labels: ["1st Trimester - 10000", "2nd Trimester - 20000", "3rd Trimester  - 15000", "Child (0-1M) - 14000", 'Child (1-3M) -  5000', 'Child (3M+) - 36000'],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        strokeDashArray: 4,
+                    },
+                    colors: ["#FF9AA2", "#B5EAD7", "#C7CEEA", "#FFDAC1", "#DFE9ED", "#D2C3D8"],
+                    legend: {
+                        show: true,
+                        position: 'bottom',
+                        offsetY: 12,
+                        markers: {
+                            width: 10,
+                            height: 10,
+                            radius: 100,
+                        },
+                        itemMargin: {
+                            horizontal: 8,
+                            vertical: 8
+                        },
                     },
                     tooltip: {
-                        enabled: false
+                        fillSeriesColor: false
                     },
-                    axisBorder: {
-                        show: false,
+                })).render();
+            });
+            // @formatter:on
+        </script>
+        <script>
+            // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-subscription-pack-upgrades'), {
+                    chart: {
+                        type: "donut",
+                        fontFamily: 'inherit',
+                        height: 240,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
                     },
-                    categories: ['Added', 'Completed', 'Active Subscription', 'Deactivated'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
+                    fill: {
+                        opacity: 1,
                     },
-                },
-                colors: ["#D8ECFF"],
-                legend: {
-                    show: false,
-                },
-            })).render();
-
-        });
-
-
-
-        // @formatter:on
-    </script>
-    <script>
-        // @formatter:off
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            window.ApexCharts && (new ApexCharts(document.getElementById('chart-incomingrch'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
-                        show: false,
+                    series: [70000, 30000],
+                    labels: ["Mother to Child -70000", "In Mother but 24+ week - 30000",],
+                    tooltip: {
+                        theme: 'dark'
                     },
-                    animations: {
-                        enabled: false
+                    grid: {
+                        strokeDashArray: 4,
                     },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '20%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [3840913, 1057914, 2782999]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
-                    },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
+                    colors: ["#FF9AA2", "#B5EAD7"],
+                    legend: {
+                        show: true,
+                        position: 'bottom',
+                        offsetY: 12,
+                        markers: {
+                            width: 10,
+                            height: 10,
+                            radius: 100,
+                        },
+                        itemMargin: {
+                            horizontal: 8,
+                            vertical: 8
+                        },
                     },
                     tooltip: {
-                        enabled: false
+                        fillSeriesColor: false
                     },
-                    axisBorder: {
-                        show: false,
-                    },
-                    categories: ['Receive', 'Accepted', 'Rejected'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
-                    },
-                },
-                colors: ["#FFDAC1"],
-                legend: {
-                    show: false,
-                },
-            })).render();
-
-        });
+                })).render();
+            });
+            // @formatter:on
+        </script>
 
 
+        <!-- Map data for India -->
+        <script src="./libs/jsvectormap/dist/js/jsvectormap.min.js?1692870487" defer></script>
+        <script src="./libs/jsvectormap/dist/maps/world.js?1692870487" defer></script>
+        <script src="./libs/jsvectormap/dist/maps/world-merc.js?1692870487" defer></script>
 
-        // @formatter:on
-    </script>
-    <script>
-        // @formatter:off
-        document.addEventListener("DOMContentLoaded", function () {
-            window.ApexCharts && (new ApexCharts(document.getElementById('chart-completion-tasks-6'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 400,
-                    parentHeightOffset: 0,
-                    toolbar: {
-                        show: false,
-                    },
-                    animations: {
-                        enabled: false
-                    },
-                },
-                plotOptions: {
-                    bar: {
-                        barHeight: '50%',
-                        horizontal: true,
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "Tasks completion",
-                    data: [4724, 592, 544019, 797, 571850, 777521, 49665, 26122, 0, 66, 128945, 305582]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
-                    },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
-                    },
-                    tooltip: {
-                        enabled: false
-                    },
-                    axisBorder: {
-                        show: false,
-                    },
-                    categories: ['Not Valid', 'Invalid Child DOB', 'Invalid LMP', 'Invalid Child Death', 'Abort', 'Duplicate Record', 'Already Subscribed', 'Missmatch Child & Mother', 'Recorded with Active Child', 'Invalid Case', 'Format Issue', ' Invalid Number'],
+        <!-- JavaScript to initialize the map -->
+        <script>
 
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
-                    },
-                },
+            document.addEventListener("DOMContentLoaded", function () {
 
-                colors: ["#FFDAC1"],
-                legend: {
-                    show: false,
-                },
-            })).render();
-        });
-        // @formatter:on
-    </script>
-    <script>
-        // @formatter:off
-        document.addEventListener("DOMContentLoaded", function () {
-            window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-subscribers-added'), {
-                chart: {
-                    type: "donut",
-                    fontFamily: 'inherit',
-                    height: 240,
-                    sparkline: {
-                        enabled: true
-                    },
-                    animations: {
-                        enabled: false
-                    },
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [10000, 20000, 15000, 14000, 5000, 36000],
-                labels: ["1st Trimester - 10000", "2nd Trimester - 20000", "3rd Trimester  - 15000", "Child (0-1M) - 14000", 'Child (1-3M) -  5000', 'Child (3M+) - 36000'],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    strokeDashArray: 4,
-                },
-                colors: ["#FF9AA2", "#B5EAD7", "#C7CEEA", "#FFDAC1", "#DFE9ED", "#D2C3D8"],
-                legend: {
-                    show: true,
-                    position: 'bottom',
-                    offsetY: 12,
-                    markers: {
-                        width: 10,
-                        height: 10,
-                        radius: 100,
-                    },
-                    itemMargin: {
-                        horizontal: 8,
-                        vertical: 8
-                    },
-                },
-                tooltip: {
-                    fillSeriesColor: false
-                },
-            })).render();
-        });
-        // @formatter:on
-    </script>
-    <script>
-        // @formatter:off
-        document.addEventListener("DOMContentLoaded", function () {
-            window.ApexCharts && (new ApexCharts(document.getElementById('chart-subscription-pack-upgrades'), {
-                chart: {
-                    type: "donut",
-                    fontFamily: 'inherit',
-                    height: 240,
-                    sparkline: {
-                        enabled: true
-                    },
-                    animations: {
-                        enabled: false
-                    },
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [70000, 30000],
-                labels: ["Mother to Child -70000", "In Mother but 24+ week - 30000",],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    strokeDashArray: 4,
-                },
-                colors: ["#FF9AA2", "#B5EAD7"],
-                legend: {
-                    show: true,
-                    position: 'bottom',
-                    offsetY: 12,
-                    markers: {
-                        width: 10,
-                        height: 10,
-                        radius: 100,
-                    },
-                    itemMargin: {
-                        horizontal: 8,
-                        vertical: 8
-                    },
-                },
-                tooltip: {
-                    fillSeriesColor: false
-                },
-            })).render();
-        });
-        // @formatter:on
-    </script>
+                const mapContainer = document.getElementById("map-world-merc");
 
+                // Function to calculate and set dimensions and position of the map container
+                function setMapContainerSize() {
+                    const windowHeight = window.innerHeight;
+                    const windowWidth = window.innerWidth;
 
-    <!-- Map data for India -->
-    <script src="./libs/jsvectormap/dist/js/jsvectormap.min.js?1692870487" defer></script>
-    <script src="./libs/jsvectormap/dist/maps/world.js?1692870487" defer></script>
-    <script src="./libs/jsvectormap/dist/maps/world-merc.js?1692870487" defer></script>
+                    // Adjusting the map container size to the window dimensions
+                    mapContainer.style.width = 950 + "px";
+                    mapContainer.style.height = 850 + "px";
 
-    <!-- JavaScript to initialize the map -->
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const mapContainer = document.getElementById("map-world-merc");
-
-            // Function to calculate and set dimensions and position of the map container
-            function setMapContainerSize() {
-                const windowHeight = window.innerHeight;
-                const windowWidth = window.innerWidth;
-
-                // Adjusting the map container size to the window dimensions
-                mapContainer.style.width = 950 + "px";
-                mapContainer.style.height = 850 + "px";
-
-                // Centering the map within the container
-                const mapWidth = 1200; // Adjusted width
-                const mapHeight = 800; // Adjusted height
-                const topMargin = (windowHeight - mapHeight) / 2;
-                const leftMargin = (windowWidth - mapWidth) / 2;
-                mapContainer.style.marginTop = topMargin + "px";
-                mapContainer.style.marginLeft = 50 + "px";
-            }
-
-
-            // Call the function initially to set the map container size
-            setMapContainerSize();
-
-
-            const map = new jsVectorMap({
-                selector: '#map-world-merc',
-                map: 'world',
-                backgroundColor: 'transparent',
-                regionStyle: {
-                    // Define styles for additional states first
-                    "IN-JK": {
-                        fill: '#E38189' // Color for Jammu and Kashmir
-                    },
-                    "IN-DL": {
-                        fill: '#E38189' // Color for Delhi
-                    },
-                    "IN-HP": {
-                        fill: '#E38189' // Color for Delhi
-                    },
-                    "IN-UP": {
-                        fill: '#E38189' // Color for Delhi
-                    },
-                    "IN-CT": {
-                        fill: '#E38189' // Color for Delhi
-                    },
-
-                    // Then define the initial style
-                    initial: {
-                        fill: '#ECECEC', // Default color for regions
-                        stroke: 'rgba(0,0,0,0.08)',
-                        'stroke-width': 1,
-                        cursor: 'pointer'
-                    }
-                },
-                zoomOnScroll: false,
-                zoomButtons: false,
-                containerStyle: {
-                    width: '100px',
-                    height: '10px'
-                },
-
-                viewport: {
-                    initial: {
-                        center: { x: 0.5, y: 0.5 }, // Center the map horizontally and vertically
-                        zoom: 1 // Adjust the initial zoom level as needed
-                    }
+                    // Centering the map within the container
+                    const mapWidth = 1200; // Adjusted width
+                    const mapHeight = 800; // Adjusted height
+                    const topMargin = (windowHeight - mapHeight) / 2;
+                    const leftMargin = (windowWidth - mapWidth) / 2;
+                    mapContainer.style.marginTop = topMargin + "px";
+                    mapContainer.style.marginLeft = 50 + "px";
                 }
 
-            });
 
-            // Define the color for specific regions based on their data-code attribute
-            // Define the color for specific regions based on their data-code attribute
-            const regionColors = {
-                "IN-JK": '#E38189', // Color for Jammu and Kashmir
-                "IN-DL": '#E38189', // Color for Delhi
-                "IN-HP": '#B5EAD7',
-                "IN-UP": '#B5EAD7',
-                "IN-CT": '#B5EAD7',
-                "IN-UT": "#F1E9A3",
-                "IN-HR": "#F1E9A3",
-                "IN-MP": "#F1E9A3",
-                "IN-RJ": "#E38189",
-                "IN-OR": "#E38189",
-                "IN-AP": "#E38189",
-                "IN-AS": "#F1E9A3",
-                "IN-BR": "#E38189",
-                "IN-JH": "#F1E9A3",
-                "IN-WB": '#B5EAD7'
-                // Add more regions and their colors as needed
-            };
+                // Call the function initially to set the map container size
+                setMapContainerSize();
 
 
-            // Apply the custom colors to the regions
-            for (const code in regionColors) {
-                map.regions[code].element.setStyle({
-                    fill: regionColors[code]
+                const map = new jsVectorMap({
+                    selector: '#map-world-merc',
+                    map: 'world',
+                    backgroundColor: 'transparent',
+                    regionStyle: {
+                        // Define styles for additional states first
+                        "IN-JK": {
+                            fill: '#E38189' // Color for Jammu and Kashmir
+                        },
+                        "IN-DL": {
+                            fill: '#E38189' // Color for Delhi
+                        },
+                        "IN-HP": {
+                            fill: '#E38189' // Color for Delhi
+                        },
+                        "IN-UP": {
+                            fill: '#E38189' // Color for Delhi
+                        },
+                        "IN-CT": {
+                            fill: '#E38189' // Color for Delhi
+                        },
+
+                        // Then define the initial style
+                        initial: {
+                            fill: '#ECECEC', // Default color for regions
+                            stroke: 'rgba(0,0,0,0.08)',
+                            'stroke-width': 1,
+                            cursor: 'pointer'
+                        }
+                    },
+                    zoomOnScroll: false,
+                    zoomButtons: false,
+                    containerStyle: {
+                        width: '100px',
+                        height: '10px'
+                    },
+
+                    viewport: {
+                        initial: {
+                            center: { x: 0.5, y: 0.5 }, // Center the map horizontally and vertically
+                            zoom: 1 // Adjust the initial zoom level as needed
+                        }
+                    }
+
                 });
-            }
 
-            window.addEventListener("resize", () => {
-                map.updateSize();
+                // Define the color for specific regions based on their data-code attribute
+                // Define the color for specific regions based on their data-code attribute
+                const regionColors = {
+                    "IN-JK": '#E38189', // Color for Jammu and Kashmir
+                    "IN-DL": '#E38189', // Color for Delhi
+                    "IN-HP": '#B5EAD7',
+                    "IN-UP": '#B5EAD7',
+                    "IN-CT": '#B5EAD7',
+                    "IN-UT": "#F1E9A3",
+                    "IN-HR": "#F1E9A3",
+                    "IN-MP": "#F1E9A3",
+                    "IN-RJ": "#E38189",
+                    "IN-OR": "#E38189",
+                    "IN-AP": "#E38189",
+                    "IN-AS": "#F1E9A3",
+                    "IN-BR": "#E38189",
+                    "IN-JH": "#F1E9A3",
+                    "IN-WB": '#B5EAD7'
+                    // Add more regions and their colors as needed
+                };
+
+
+                // Apply the custom colors to the regions
+                for (const code in regionColors) {
+                    map.regions[code].element.setStyle({
+                        fill: regionColors[code]
+                    });
+                }
+
+                window.addEventListener("resize", () => {
+                    map.updateSize();
+                });
             });
-        });
 
-    </script>
+        </script>
 
 
-    <script>
-        document.getElementById('select-type').addEventListener('change', function () {
-            // Hide all divs
-            document.getElementById('kpi-dashboard').style.display = 'none';
-            document.getElementById('ivr-dashboard').style.display = 'none';
-            document.getElementById('whatsapp-dashboard').style.display = 'none';
+        <script>
+            document.getElementById('select-type').addEventListener('change', function () {
+                // Hide all divs
+                document.getElementById('kpi-dashboard').style.display = 'none';
+                document.getElementById('ivr-dashboard').style.display = 'none';
+                document.getElementById('whatsapp-dashboard').style.display = 'none';
 
-            // Show the selected div
-            var selectedValue = this.value;
-            if (selectedValue === 'k_kpi') {
-                document.getElementById('kpi-dashboard').style.display = 'block';
-            } else if (selectedValue === 'k_ivr') {
-                document.getElementById('ivr-dashboard').style.display = 'block';
-            } else if (selectedValue === 'k_whatsapp') {
-                document.getElementById('whatsapp-dashboard').style.display = 'block';
-                addDomContentLoadedEventListener()
-            }
-        });
-    </script>
-
+                // Show the selected div
+                var selectedValue = this.value;
+                if (selectedValue === 'k_kpi') {
+                    document.getElementById('kpi-dashboard').style.display = 'block';
+                } else if (selectedValue === 'k_ivr') {
+                    document.getElementById('ivr-dashboard').style.display = 'block';
+                } else if (selectedValue === 'k_whatsapp') {
+                    document.getElementById('whatsapp-dashboard').style.display = 'block';
+                    addDomContentLoadedEventListener()
+                }
+            });
+        </script>
 
 
 
-    <!--K-Whatsapp-->
 
-    <script>
+        <!--K-Whatsapp-->
 
-        function addDomContentLoadedEventListener() {
+        <script>
 
-  const mapContainerKWhatsapp = document.getElementById("map-world-merc-k-whatsapp");
+            function addDomContentLoadedEventListener() {
+
+                const mapContainerKWhatsapp = document.getElementById("map-world-merc-k-whatsapp");
 
                 // Function to calculate and set dimensions and position of the map container
                 function setMapContainerSize() {
@@ -1079,432 +1089,507 @@
                     mapKW.updateSize();
                 });
 
-        
-        }
-    </script>
 
-    <script>
-        // @formatter:off
+            }
+        </script>
 
-        document.addEventListener("DOMContentLoaded", function () {
+        <script>
+            // @formatter:off
 
-            window.ApexCharts && (new ApexCharts(document.getElementById('whatsapp-additions-k-whatsapp'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
+            document.addEventListener("DOMContentLoaded", function () {
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('whatsapp-additions-k-whatsapp'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '20%',
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "A",
+                        data: [3840913, 1057914, 2782999]
+                    }],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Receive', 'Accepted', 'Rejected'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ["#FFDAC1"],
+                    legend: {
                         show: false,
                     },
-                    animations: {
-                        enabled: false
+                })).render();
+
+            });
+
+
+
+            // @formatter:on
+        </script>
+
+
+        <script>
+            // @formatter:off
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('unique-subscribers-served-k-whatsapp'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
                     },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '20%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [3840913, 1057914, 2782999]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '30%',
+                        }
                     },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "A",
+                        data: [1027218, 103690, 2697678, 510321]
+                    }],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Added', 'Completed', 'Active Subscription', 'Deactivated'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ["#D8ECFF"],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+
+            });
+
+
+
+            // @formatter:on
+        </script>
+
+        <script>
+            // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('core-messages-k-whatsapp'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '20%',
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "A",
+                        data: [3840913, 2782999, 257288, 257288]
+                    }],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Sent', 'Delivered', 'Read', 'Responded'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ['#B5EAD7', '#C7CEEA', '#FFDAC1', '#D2C3D8'],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+
+
+
+
+            });
+        </script>
+
+        <script>
+            // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-subscribers-added-k-whatsapp'), {
+                    chart: {
+                        type: "donut",
+                        fontFamily: 'inherit',
+                        height: 240,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [10000, 20000, 15000, 14000, 5000, 36000],
+                    labels: ["1st Trimester - 10000", "2nd Trimester - 20000", "3rd Trimester  - 15000", "Child (0-1M) - 14000", 'Child (1-3M) -  5000', 'Child (3M+) - 36000'],
+                    tooltip: {
+                        theme: 'dark'
+                    },
+                    grid: {
+                        strokeDashArray: 4,
+                    },
+                    colors: ["#FF9AA2", "#B5EAD7", "#C7CEEA", "#FFDAC1", "#DFE9ED", "#D2C3D8"],
+                    legend: {
+                        show: true,
+                        position: 'bottom',
+                        offsetY: 12,
+                        markers: {
+                            width: 10,
+                            height: 10,
+                            radius: 100,
+                        },
+                        itemMargin: {
+                            horizontal: 8,
+                            vertical: 8
+                        },
                     },
                     tooltip: {
-                        enabled: false
+                        fillSeriesColor: false
                     },
-                    axisBorder: {
-                        show: false,
+                })).render();
+            });
+            // @formatter:on
+        </script>
+
+
+        <script>
+            // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('interactivemessages-k-whatsapp'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
                     },
-                    categories: ['Receive', 'Accepted', 'Rejected'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '20%',
+                        }
                     },
-                },
-                colors: ["#FFDAC1"],
-                legend: {
-                    show: false,
-                },
-            })).render();
-
-        });
-
-
-
-        // @formatter:on
-    </script>
-
-
-    <script>
-        // @formatter:off
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            window.ApexCharts && (new ApexCharts(document.getElementById('unique-subscribers-served-k-whatsapp'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
-                        show: false,
+                    dataLabels: {
+                        enabled: false,
                     },
-                    animations: {
-                        enabled: false
+                    fill: {
+                        opacity: 1,
                     },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '30%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [1027218, 103690, 2697678, 510321]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
-                    },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
-                    },
+                    series: [{
+                        name: "A",
+                        data: [3230913, 1057914, 2782999]
+                    }],
                     tooltip: {
-                        enabled: false
+                        theme: 'dark'
                     },
-                    axisBorder: {
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Sent', 'Button Response', 'User messages'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ['#B5EAD7', '#C7CEEA', '#FFDAC1'],
+                    legend: {
                         show: false,
                     },
-                    categories: ['Added', 'Completed', 'Active Subscription', 'Deactivated'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
+                })).render();
+
+
+
+
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('interactivemessages-k-whatsapp-new'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
                     },
-                },
-                colors: ["#D8ECFF"],
-                legend: {
-                    show: false,
-                },
-            })).render();
-
-        });
-
-
-
-        // @formatter:on
-    </script>
-
-    <script>
-        // @formatter:off
-        document.addEventListener("DOMContentLoaded", function () {
-
-
-            window.ApexCharts && (new ApexCharts(document.getElementById('core-messages-k-whatsapp'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
-                        show: false,
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '20%',
+                        }
                     },
-                    animations: {
-                        enabled: false
+                    dataLabels: {
+                        enabled: false,
                     },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '20%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [3840913, 2782999, 257288,257288]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
+                    fill: {
+                        opacity: 1,
                     },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
-                    },
+                    series: [{
+                        name: "A",
+                        data: [1027218, 103690, 2697678, 510321]
+                    }],
                     tooltip: {
-                        enabled: false
+                        theme: 'dark'
                     },
-                    axisBorder: {
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['Sent', 'Delivered', 'read', 'Responded'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ['#B5EAD7', '#C7CEEA', '#FFDAC1'],
+                    legend: {
                         show: false,
                     },
-                    categories: ['Sent', 'Delivered', 'Read','Responded'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
-                    },
-                },
-                colors: ['#B5EAD7','#C7CEEA','#FFDAC1','#D2C3D8'],
-                legend: {
-                    show: false,
-                },
-            })).render();
-
-        
+                })).render();
 
 
-        });
-    </script>
-
-    <script>
-        // @formatter:off
-        document.addEventListener("DOMContentLoaded", function () {
-            window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-subscribers-added-k-whatsapp'), {
-                chart: {
-                    type: "donut",
-                    fontFamily: 'inherit',
-                    height: 240,
-                    sparkline: {
-                        enabled: true
-                    },
-                    animations: {
-                        enabled: false
-                    },
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [10000, 20000, 15000, 14000, 5000, 36000],
-                labels: ["1st Trimester - 10000", "2nd Trimester - 20000", "3rd Trimester  - 15000", "Child (0-1M) - 14000", 'Child (1-3M) -  5000', 'Child (3M+) - 36000'],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    strokeDashArray: 4,
-                },
-                colors: ["#FF9AA2", "#B5EAD7", "#C7CEEA", "#FFDAC1", "#DFE9ED", "#D2C3D8"],
-                legend: {
-                    show: true,
-                    position: 'bottom',
-                    offsetY: 12,
-                    markers: {
-                        width: 10,
-                        height: 10,
-                        radius: 100,
-                    },
-                    itemMargin: {
-                        horizontal: 8,
-                        vertical: 8
-                    },
-                },
-                tooltip: {
-                    fillSeriesColor: false
-                },
-            })).render();
-        });
-        // @formatter:on
-    </script>
 
 
-       <script>
-        // @formatter:off
-        document.addEventListener("DOMContentLoaded", function () {
+            });
+
+        </script>
 
 
-            window.ApexCharts && (new ApexCharts(document.getElementById('interactivemessages-k-whatsapp'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
-                        show: false,
+         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+                window.ApexCharts && (new ApexCharts(document.getElementById('messages-sent-by-stage-k-whatsapp'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 340,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
                     },
-                    animations: {
-                        enabled: false
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '20%',
+                        }
                     },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '20%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [3230913, 1057914, 2782999]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
+                    dataLabels: {
+                        enabled: false,
                     },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
+                    fill: {
+                        opacity: 1,
                     },
+                    series: [{
+                        name: "A",
+                        data: [56987462, 88549872, 59865247, 125934216,181230976,32638285,214197267,26080141,56498765,6895476]
+                    }],
                     tooltip: {
-                        enabled: false
+                        theme: 'dark'
                     },
-                    axisBorder: {
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0,
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        categories: ['1', '2', '3', '4','5','6','7','8','9','10'],
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    colors: ['#D2C3D8', '#D2C3D8', '#D2C3D8'],
+                    legend: {
                         show: false,
                     },
-                    categories: ['Sent', 'Response', 'messages'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
-                    },
-                },
-                colors: ['#B5EAD7','#C7CEEA','#FFDAC1'],
-                legend: {
-                    show: false,
-                },
-            })).render();
-
-        
+                })).render();
 
 
-        });
-    </script>
-
-    <script>
-          document.addEventListener("DOMContentLoaded", function () {
 
 
-            window.ApexCharts && (new ApexCharts(document.getElementById('interactivemessages-k-whatsapp-new'), {
-                chart: {
-                    type: "bar",
-                    fontFamily: 'inherit',
-                    height: 340,
-                    parentHeightOffset: 0,
-                    toolbar: {
-                        show: false,
-                    },
-                    animations: {
-                        enabled: false
-                    },
-                },
-                plotOptions: {
-                    bar: {
-                        columnWidth: '20%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false,
-                },
-                fill: {
-                    opacity: 1,
-                },
-                series: [{
-                    name: "A",
-                    data: [3230913, 1057914, 2782999]
-                }],
-                tooltip: {
-                    theme: 'dark'
-                },
-                grid: {
-                    padding: {
-                        top: -20,
-                        right: 0,
-                        left: -4,
-                        bottom: -4
-                    },
-                    strokeDashArray: 4,
-                },
-                xaxis: {
-                    labels: {
-                        padding: 0,
-                    },
-                    tooltip: {
-                        enabled: false
-                    },
-                    axisBorder: {
-                        show: false,
-                    },
-                    categories: ['Sent', 'Response', 'messages'],
-                },
-                yaxis: {
-                    labels: {
-                        padding: 4
-                    },
-                },
-                colors: ['#B5EAD7','#C7CEEA','#FFDAC1'],
-                legend: {
-                    show: false,
-                },
-            })).render();
+            });
 
-        
-
-
-        });
-
-    </script>
+        </script>
 
 </body>
 
